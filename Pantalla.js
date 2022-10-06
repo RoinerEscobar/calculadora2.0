@@ -28,7 +28,7 @@ class Pantalla {
     }
 
     addNumero(num){
-        if (num === '.' && this.valorActual.includes('.')) return alert("no puedes dos puntos decimales")
+        if (num === '.' && this.valorActual.includes('.')) return alert("No puedes usar dos puntos decimales")
         this.valorActual = this.valorActual.toString() + num.toString();
         this.imprimirValores();
     }
