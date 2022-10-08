@@ -57,6 +57,12 @@ class Pantalla {
         this.valorActual = this.calculadora[this.tipoOperacion](valorAnterior, valorActual); 
 
         const valorHistorial = {operacion: `${this.valorAnterior} ${this.signos[this.tipoOperacion]} ${aux} ${"="} ${this.valorActual}` }
+        let tbody=document.getElementById("tusuarios")
+        let tablallena="";     
+        for(let i=0;i<this.historial.length;i++){
+            tablallena+="<tr><td>"+this.historial[i].operacion+"</td></tr>";
+        }    
+        tbody.innerHTML=tablallena;
         this.historial.push(valorHistorial);
     }
 
